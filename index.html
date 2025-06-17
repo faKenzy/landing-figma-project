@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inchapin</title>
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+    <body>
+        <header class="header">
+            <div class="header__container">
+              
+              <!-- Бургер -->
+              <button class="burger" aria-label="Открыть меню">
+                <span class="burger__lines">
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+                </span>
+                <span class="burger__text">МЕНЮ</span>
+              </button>
+          
+              <!-- Кнопка "ВЫБРАТЬ КВАРТИРУ" -->
+              <button class="header__dropdown">
+                <span class="dropdown__text">
+                  <span class="text--visible">ВЫБРАТЬ КВАРТИРУ</span>
+                  <span class="text--hidden">ВЫБРАТЬ КВАРТИРУ</span>
+                </span>
+                <span class="arrow"><img src="img/chevron-down.svg" alt="стрелка" /></span>
+              </button>
+          
+              <!-- Логотип -->
+              <div class="header__logo">
+                <img src="img/mainlogo.svg" alt="Логотип" />
+              </div>
+          
+              <!-- Телефон -->
+              <a href="tel:+74955272121" class="header__phone">+7 495 527 21 21</a>
+          
+              <!-- Кнопка "ЗАКАЗАТЬ ЗВОНОК" -->
+              <a href="#" class="header__callback">
+                <span class="callback__text">
+                  <span class="callback__text--visible">ЗАКАЗАТЬ ЗВОНОК</span>
+                  <span class="callback__text--hidden">ЗАКАЗАТЬ ЗВОНОК</span>
+                </span>
+              </a>
+          
+            </div>
+        </header>    
+
+
+
+    <div id="scroll-container">
+
+
+        <!-- Первый экран -->
+        <section class="hero">
+            <div class="hero__container">
+                <img class="hero__image" src="img/hero-main.png" alt="Фоновое изображение">
+                <div class="hero__text">
+                    <p class="hero__subtext">ДОМ БИЗНЕС-КЛАССА<br>ДЛЯ ЦЕНИТЕЛЕЙ РОСКОШИ</p>
+                    <p class="hero__highlight">INCHAPIN</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Второй экран -->
+        <section class="about">
+        <div class="about__container">
+            <div class="about__left">
+                <h2 class="about__title">О ПРОЕКТЕ</h2>
+                <div class="about__image-wrapper">
+                    <img class="about__image" src="img/about-image.png" alt="Основное изображение">
+                    <img class="about__overlay" src="img/overlay-image.png" alt="Доп. изображение">
+                </div>
+            </div>
+      
+          <div class="about__right">
+            <div class="about__line"></div>
+            <div class="about__block">
+                <p class="about__block-title">УЮТНОЕ И БЕЗОПАСНОЕ ПРОСТРАНСТВО ДЛЯ СЧАСТЛИВОЙ, <span class="about-text-color">СПОКОЙНОЙ И РАЗМЕРЕННОЙ ЖИЗНИ</span></p>
+            </div>
+            <div class="about__block">
+                <p class="about__block-text"><span class="about-text-color">КВАРТИРЫ ОТ 65 ДО 356 М&sup2 С ЧИСТОВОЙ ОТДЕЛКОЙ,</span> БАЛКОНАМИ, ЛОДЖИЯМИ И ТЕРРАСАМИ В СОБСТВЕННОЙ ЗАКРЫТОЙ ОХРАНЯЕМОЙ ТЕРРИТОРИИ.</p>
+            </div>
+
+            <div class="about__video">
+                <div class="about__video-info">
+                    <p class="about__video-title">ВИДЕО О ПРОЕКТЕ</p>
+                    <p class="about__video-duration">1:25 минут</p>
+                    <div class="about__video-line"></div>
+                </div>
+                <div class="about__video-link" id="videoTrigger">
+                    <div class="about__video-thumb-wrapper">
+                        <img class="about__video-thumb" src="img/video-thumb.png" alt="Видео о проекте">
+                        <div class="about__video-overlay">
+                        <div class="about__video-circle">
+                            <span class="about__video-play-text">▶ PLAY</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-modal" id="videoModal">
+                <div class="video-modal__overlay"></div>
+                <video id="aboutVideo" controls>
+                    <source src="video/video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+      </section>
+    </div>
+            <!-- Модальное окно -->
+
+            <div class="modal" id="callback-modal">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__close" aria-label="Закрыть окно">&times;</button>
+                    <form class="modal__form">
+                        <h2 class="modal__title">ЗАКАЗАТЬ ЗВОНОК</h2>
+                        <label class="form-group">
+                            <input type="text" name="name" placeholder=" " required/>
+                            <span class="placeholder">ВАШЕ ИМЯ</span>
+                        </label>
+                        <label class="form-group">
+                            <input type="tel" name="phone" placeholder=" " required/>
+                            <span class="placeholder">ТЕЛЕФОН</span>
+                        </label>
+                        <label class="form-group">
+                            <input type="email" name="email" placeholder=" " required />
+                            <span class="placeholder">E-MAIL</span>
+                        </label>
+                        <p class="form-note">Нажимая на кнопку &laquo;Отправить&raquo;, вы ознакомлены <br>и подтверждаете согласие с <a href="#">политикой обработки персональных данных</a></p>
+                        <button type="submit" class="btn">ОТПРАВИТЬ</button>
+                        <div class="form-success-message">СПАСИБО! ВАША ЗАЯВКА ОТПРАВЛЕНА.</div>
+                    </form>
+                </div>
+            </div>
+
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+    <script src="js/script.js"></script>
+    </body>
+</html>
